@@ -18,11 +18,12 @@ class MainActivity : AppCompatActivity() {
         //create variables to hold UI elements
         val multiplyBtn = findViewById<Button>(R.id.multiplyBtn)
         val numTxtInput = findViewById<EditText>(R.id.numTxtInput)
-        
+
+
         multiplyBtn.setOnClickListener {
             // created an explicit intent to switch between pages(Switching between main page to table)
             val intent = Intent(this, TableDisplay::class.java)
-
+            intent.putExtra("tableNumber",)
             // start the activity
             startActivity(intent)
         }
