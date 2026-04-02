@@ -19,11 +19,12 @@ class MainActivity : AppCompatActivity() {
         val multiplyBtn = findViewById<Button>(R.id.multiplyBtn)
         val numTxtInput = findViewById<EditText>(R.id.numTxtInput)
 
-
+        //Created a set click listener to listener for the button click
         multiplyBtn.setOnClickListener {
             // created an explicit intent to switch between pages(Switching between main page to table)
             val intent = Intent(this, TableDisplay::class.java)
-            intent.putExtra("tableNumber",)
+            //add the table number to the intent
+            intent.putExtra("tableNumber")
             // start the activity
             startActivity(intent)
         }
