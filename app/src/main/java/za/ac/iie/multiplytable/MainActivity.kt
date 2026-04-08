@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,15 +18,18 @@ class MainActivity : AppCompatActivity() {
 
         //create variables to hold UI elements
         val multiplyBtn = findViewById<Button>(R.id.multiplyBtn)
-        val numTxtInput = findViewById<EditText>(R.id.numTxtInput)
+        val numTxtInput =
+            findViewById<EditText>(R.id.numTxtInput)
 
         //Created a set click listener to listener for the button click
         multiplyBtn.setOnClickListener {
+
             // created an explicit intent to switch between pages(Switching between main page to table)
             val intent = Intent(this, TableDisplay::class.java)
+
             //add the table number to the intent
-            intent.putExtra("tableNumber",
-                tablenumberEditText.text.toString())
+            intent.putExtra("tableNumber", numTxtInput.text.toString())
+
             // start the activity
             startActivity(intent)
         }

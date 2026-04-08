@@ -9,23 +9,23 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class TableDisplay : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_table_display)
 
        //get the table number from the bundle
-        val bundle = Bundle? = intent.extras
-        val tableString: String? bundle?.getString( key = "tableNumber")
+        val bundle : Bundle? = intent.extras
+        val tableString: String? = bundle?.getString("tableNumber")
 
         //converting the string back into a number ready for multiplication
         val tableNumber = tableString?. toInt()
 
         //display the heading so we can see the value in action
         val multiplyTable = findViewById<TextView>(
-                                   R.id.tableDisplayTextView)
-        multiplyTable.text = '$tableNumber * table'
+                                   R.id.Tabledisplayact)
+        multiplyTable.text = "$tableNumber * table"
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
