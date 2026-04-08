@@ -23,9 +23,8 @@ class TableDisplay : AppCompatActivity() {
         val tableNumber = tableString?. toInt()
 
         //display the heading so we can see the value in action
-        val multiplyTable = findViewById<TextView>(
-                                   R.id.Tabledisplayact)
-        multiplyTable.text = "$tableNumber * table"
+        val multiplyTable = findViewById<TextView>(R.id.Tabledisplayact)
+        multiplyTable.text = "$tableNumber x table"
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
