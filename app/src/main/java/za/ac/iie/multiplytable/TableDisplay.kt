@@ -15,11 +15,17 @@ class TableDisplay : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_table_display)
 
+       //get the table number from the bundle
         val bundle = Bundle? = intent.extras
         val tableString: String? bundle?.getString( key = "tableNumber")
+
         //converting the string back into a number ready for multiplication
         val tableNumber = tableString?. toInt()
-        val multiplyTable = findViewById<TextView>(R.id.tableDisplayact)
+
+        //display the heading so we can see the value in action
+        val multiplyTable = findViewById<TextView>(
+                                   R.id.tableDisplayTextView)
+        multiplyTable.text = '$tableNumber * table'
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
