@@ -29,7 +29,8 @@ class TableDisplay : AppCompatActivity() {
         multiplyTable.text = "$tableNumber x table\n\n"
 
         //loop 10 times keep adding to the string
-        
+
+        //set the string onto the display
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
