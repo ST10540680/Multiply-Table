@@ -20,10 +20,12 @@ class TableDisplay : AppCompatActivity() {
         val tableString: String? = bundle?.getString("tableNumber")
 
         //converting the string back into a number ready for multiplication
-        val tableNumber = tableString?. toInt()
+        val tableNumber = tableString!!. toInt()
 
         //display the heading so we can see the value in action
         val multiplyTable = findViewById<TextView>(R.id.Tabledisplayact)
+
+        //start with the heading and two new lines
         multiplyTable.text = "$tableNumber x table"
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
