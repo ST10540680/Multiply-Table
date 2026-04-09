@@ -26,7 +26,8 @@ class TableDisplay : AppCompatActivity() {
         val multiplyTable = findViewById<TextView>(R.id.Tabledisplayact)
 
         //start with the heading and two new lines
-        multiplyTable.text = "$tableNumber x table"
+        multiplyTable.text = "$tableNumber x table\n\n"
+        
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
