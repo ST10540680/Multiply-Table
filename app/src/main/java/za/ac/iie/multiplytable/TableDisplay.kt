@@ -34,11 +34,13 @@ class TableDisplay : AppCompatActivity() {
         val counter = 1
         while (counter <= 10){ //check the control variable
             //skip 3
-            
+            if (counter == 3){
+                counter++
+                continue
+            }
             val answer = tableNumber * counter
             tableDisplay += "$tableNumber x $counter = $answer"
         }
-
         //set the string onto the display
         multiplyTable.text = tableDisplay
 
