@@ -27,6 +27,8 @@ class TableDisplay : AppCompatActivity() {
 
         //start with the heading and two new lines
         multiplyTable.text = "$tableNumber x table\n\n"
+
+        //loop 10 times keep adding to the string
         
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
