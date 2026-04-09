@@ -33,6 +33,8 @@ class TableDisplay : AppCompatActivity() {
         //declare the control variable
         val counter = 1
         while (counter <= 10){ //check the control variable
+            //skip 3
+            
             val answer = tableNumber * counter
             tableDisplay += "$tableNumber x $counter = $answer"
         }
