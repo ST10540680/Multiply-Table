@@ -5,26 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dark_grey_liquid_abstract_dark_13_10_2024_1728803407_hd_wallpaper__1_"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="Multiplication Table"
         android:textAlignment="center"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="87dp" />
+        android:textColor="#BF372D"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="83dp" />
 
     <EditText
         android:id="@+id/numTxtInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="serif"
         android:inputType="number"
         android:text="enter number"
         android:textAlignment="center"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="278dp" />
 
@@ -32,6 +38,7 @@
         android:id="@+id/multiplyBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="Multiply!"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="160dp"

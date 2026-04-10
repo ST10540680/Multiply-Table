@@ -32,7 +32,7 @@ class TableDisplay : AppCompatActivity() {
 
         //declare the control variable
         val counter = 1
-        while (counter <= 10){ //check the control variable
+        while (counter <= 20){ //check the control variable
             //skip 3
             if (counter == 3){
                 counter++
