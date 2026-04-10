@@ -8,13 +8,26 @@
     android:background="@drawable/screenshot_2026_04_10_134508"
     tools:context=".TableDisplay">
 
-    <TextView
-        android:id="@+id/Tabledisplayact"
-        android:layout_width="90dp"
-        android:layout_height="47dp"
-        android:fontFamily="serif"
-        android:text="TextView"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="342dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="-124dp">
+
+        <TextView
+            android:id="@+id/Tabledisplayact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="1 x 1 = 1\n1 x 2 = 2" />
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

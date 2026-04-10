@@ -12,36 +12,43 @@
         android:id="@+id/titleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         android:fontFamily="serif"
-        android:text="Multiplication Table"
+        android:text="@string/title_multiplication_table"
         android:textAlignment="center"
-        android:textColor="#BF372D"
+        android:textColor="#E64032"
         android:textSize="28sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/numTxtInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:fontFamily="serif"
+        android:hint="@string/hint_enter_number"
         android:inputType="number"
-        android:text="enter number"
+        android:autofillHints="none"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="278dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
 
     <Button
         android:id="@+id/multiplyBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:fontFamily="serif"
-        android:text="Multiply!"
+        android:text="@string/btn_multiply"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="508dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numTxtInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

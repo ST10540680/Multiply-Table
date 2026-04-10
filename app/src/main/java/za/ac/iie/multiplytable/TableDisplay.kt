@@ -15,34 +15,35 @@ class TableDisplay : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_table_display)
 
-       //get the table number from the bundle
-        val bundle : Bundle? = intent.extras
-        var tableDisplay: String? = bundle?.getString("tableNumber")
+        // Get the table number from the intent extras
+        val tableNumberString = intent.getStringExtra("tableNumber")
+        
+        // Convert the string to an integer, defaulting to 0 if invalid or null
+        val tableNumber = tableNumberString?.toIntOrNull() ?: 0
 
-        //converting the string back into a number ready for multiplication
-        val tableNumber = tableDisplay!!. toInt()
-
-        //display the heading so we can see the value in action
         val multiplyTable = findViewById<TextView>(R.id.Tabledisplayact)
 
-        //start with the heading and two new lines
-        multiplyTable.text = "$tableNumber x table\n\n"
+        // Use a StringBuilder to efficiently build the multiplication table string
+        val resultBuilder = StringBuilder()
+        resultBuilder.append("$tableNumber Times Table\n\n")
 
-        //loop 10 times keep adding to the string
-
-        //declare the control variable
-        val counter = 1
-        while (counter <= 20){ //check the control variable
-            //skip 3
-            if (counter == 3){
+        var counter = 1
+        // Loop up to 20 to generate the table
+        while (counter <= 20) {
+            // Example requirement: skip 3 (as seen in original code)
+            if (counter == 3) {
                 counter++
                 continue
             }
+            
             val answer = tableNumber * counter
-            tableDisplay += "$tableNumber x $counter = $answer"
+            resultBuilder.append("$tableNumber x $counter = $answer\n")
+            
+            counter++ // Increment counter to avoid infinite loop
         }
-        //set the string onto the display
-        multiplyTable.text = tableDisplay
+
+        // Set the built string to the TextView
+        multiplyTable.text = resultBuilder.toString()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
